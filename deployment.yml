@@ -18,4 +18,4 @@ spec:
       - name: nodeserver
         image: imrandil/the_node_app_for_minikube_practice:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 7000
