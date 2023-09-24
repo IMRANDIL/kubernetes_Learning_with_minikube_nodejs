@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: your-deployment-name
+  name: nodeapp-deployment
   labels:
-    app: your-app-label
+    app: nodeapp
 spec:
-  replicas: 3  # Adjust the number of desired replicas
+  replicas: 1
   selector:
     matchLabels:
-      app: your-app-label
+      app: nodeapp
   template:
     metadata:
       labels:
-        app: your-app-label
+        app: nodeapp 
     spec:
       containers:
-      - name: your-container-name
-        image: your-docker-image:your-tag
+      - name: nodeserver
+        image: imrandil/the_node_app_for_minikube_practice:latest
         ports:
-        - containerPort: 7000
+        - containerPort: 3000
